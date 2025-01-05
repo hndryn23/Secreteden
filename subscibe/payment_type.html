@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Interface</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+
+<form id="paymentForm" action="payment_type.php" method="POST">
+  <!-- Hidden Fields -->
+  <input type="date" id="date" name="date" class="hidden" readonly>
+  <input type="number" id="amount" name="amount" value="25" class="hidden" readonly>
+  <input type="text" id="category" name="category" value="Subscription" class="hidden" readonly>
+  <input type="text" id="description" name="description" value="Premium" class="hidden" readonly>
+  <input type="text" id="paymentMethod" name="paymentMethod" class="hidden" readonly>
+  <h2>Select A Payment Method</h2>
+  <div class="form-group">
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  </div>
+
+  <div class="payment-method">
+    <button type="button" id="cardButton" class="active" data-method="Card">Card</button>
+    <button type="button" id="paypalButton" data-method="PayPal">PayPal</button>
+    <button type="button" id="bankButton" data-method="Online Bank">Online Bank</button>
+  </div>
+
+  <div id="cardSection" class="payment-section active">
+  <div class="form-group">
+    <label for="cardNumber">Card Number</label>
+    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 1234 1234 1234" required>
+  </div>
+  <div class="form-group">
+    <label for="expiry">Expiry</label>
+    <input type="text" id="expiry" name="expiry" placeholder="MM / YY" required>
+  </div>
+  <div class="form-group">
+    <label for="cvc">CVC</label>
+    <input type="text" id="cvc" name="cvc" placeholder="123" required>
+  </div>
+</div>
+
+
+  <div id="paypalSection" class="payment-section">
+    <div class="form-group">
+      <label for="paypalEmail">PayPal Email</label>
+      <input type="email" id="paypalEmail" name="paypalEmail" placeholder="Enter your PayPal email">
+    </div>
+  </div>
+
+  <div id="bankSection" class="payment-section">
+    <div class="form-group">
+      <label for="bank">Select Bank</label>
+      <select id="bank" name="bank">
+        <option value="">-- Select Bank --</option>
+        <option value="bank1">Bank 1</option>
+        <option value="bank2">Bank 2</option>
+        <option value="bank3">Bank 3</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <input type="checkbox" id="terms" required>
+    <label for="terms">I Agree To The Terms And Conditions</label>
+  </div>
+
+  <div class="form-group">
+    <button type="button" id="cancelButton">Cancel</button>
+    <button type="submit" id="proceedButton">Proceed</button>
+  </div>
+</form>
+
+<script src="payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --blue: #4A90E2; /* Modern blue shade */
+    --light-blue: rgba(74, 144, 226, 0.1); /* Subtle blue background */
+    --dark-blue: #003B73; /* Darker blue hover color */
+    --gray: #555; /* Neutral gray for text */
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none; /* Remove underline globally */
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 0 5%; /* Adjust padding */
+    height: 4rem; /* Fixed height for the header */
+    width:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: clip;
+}
+/* Style for the logo and title */
+.logo-container {
+    display: flex;
+    align-items: center; /* Align the logo and text vertically */
+    gap: 1px; /* Space between the logo and the text */
+}
+
+.logo-container img {
+    height: 87px; /* Adjust the logo size */
+    width: auto;  /* Maintain aspect ratio */
+}
+
+.logo-container .logo {
+    font-size: 1.5rem; /* Adjust font size for the title */
+    font-weight: bold;
+    color: #333; /* You can customize the text color */
+    text-decoration: none;
+    margin: 0; /* Remove default margin */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Align everything vertically */
+    padding: 10px 20px; /* Add some padding around the header */
+}
+
+.navbar a {
+    margin: 0 10px; /* Space between nav links */
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.icons a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+header .logo span {
+    color: var(--blue); /* Optional: Accent color */
+}
+
+/* Navigation */
+header .navbar {
+    display: flex;
+    gap: 1.0rem; /* Reduced spacing between navigation links */
+  
+}
+
+header .navbar a {
+    font-size: 1.2rem; /* Smaller font size for navigation links */
+    color: #666;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem; /* Reduced padding for smaller size */
+    line-height: 4rem; /* Align links vertically within the header */
+}
+
+header .navbar a:hover {
+    color: var(--blue);
+}
+
+/* Icons */
+header .icons {
+    display: flex;
+    gap: 1rem; /* Reduced spacing between icons */
+    align-items: center;
+}
+
+header .icons a {
+    font-size: 1.6rem; /* Smaller icon size */
+    color: #333;
+    line-height: 4rem; /* Align icons vertically within the header */
+}
+
+header .icons a:hover {
+    color: var(--blue);
+}
+
+/* Hamburger Menu */
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 2rem; /* Slightly smaller hamburger menu icon size */
+    color: #333;
+    padding: 0.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+body {
+    background-image: url('images/Flower%20Fair.png');
+    background-size: cover; /* Ensures the background covers the entire screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed during scrolling */
+    background-position: center; /* Centers the image */
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.pricing-table {
+    padding: inherit;
+    margin-top: 79px;
+    
+}
+
+
+.pricing-table .details {
+    width: 90%;
+    max-width: 507px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 20px;
+    
+}
+
+.pricing-table .details h2 {
+    font-size: 44px;
+    margin-bottom: 5px;
+    
+}
+
+.pricing-table .details p {
+    font-size: 15px;
+}
+
+.pricing-table .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 16px;
+    padding: 20px;
+}
+
+.pricing-table .grid .box {
+    width: 349px;
+    height: 493px;
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.51);
+    transition: transform 0.3s ease;
+    
+}
+
+.pricing-table .grid .box:hover {
+    transform: scale(1.05);
+}
+
+.pricing-table .grid .box .title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.pricing-table .grid .box .price {
+    margin-bottom: 21px;
+}
+
+.pricing-table .grid .box .price b {
+    display: block;
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+
+.pricing-table .grid .box .features > * {
+    color: #555;
+    padding: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.pricing-table .grid .box .button button {
+    width: 100%;
+    margin: 25px 0 0;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    background: rgba(255, 251, 251, 0.58);
+    border: none;
+    transition: transform 0.3s;
+}
+
+
+.pricing-table .grid .box .button button:hover {
+    background: rgba(251, 114, 114, 0.58);
+}
+.pricing-table .grid .box-premium {
+    width: 503px;
+    height: 583px;
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px 5px rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.51);
+    transition: transform 0.3s ease;
+    
+}
+
+.pricing-table .grid .box-premium:hover {
+    transform: scale(1.05);
+}
+
+.pricing-table .grid .box-premium .title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.pricing-table .grid .box-premium .price {
+    margin-bottom: 21px;
+}
+
+.pricing-table .grid .box-premium .price b {
+    display: block;
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+
+.pricing-table .grid .box-premium .features > * {
+    color: #555;
+    padding: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.pricing-table .grid .box-premium .button button {
+    width: 100%;
+    margin: 25px 0 0;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    background: rgba(255, 251, 251, 0.58);
+    border: none;
+    transition: transform 0.3s;
+}
+
+
+.pricing-table .grid .box .button button:hover {
+    background: #4A90E2;
+}
+.pricing-table .grid .box-premium .button button:hover {
+    background: #4A90E2;
+}
+
+/* Subscribe Button */
+.subscribe-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.51);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.details-button{
+   font-size: 1.2rem; 
+}
+.subscribe-button:hover {
+    background-color: var(--dark-blue);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.subscribe-button:active {
+    animation: clickTransform 0.2s ease-in-out; /* Apply click animation */
+}
+.details-button:hover {
+    background-color: var(--dark-blue);
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.details-button:active {
+    animation: clickTransform 0.2s ease-in-out; /* Apply click animation */
+}
+
+/* Animation for Click */
+@keyframes clickTransform {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative; 
+    background-color: #fff;
+    margin: 4% auto;
+    padding: 17px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 496px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+
+
+.modal-content input, select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 9px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.actions .cancel {
+    background-color: #ccc;
+    color: #000;
+}
+
+.actions .proceed {
+    background-color: #4A90E2;
+    color: #fff;
+}
+.close {
+    position: absolute;
+    top: 10px; /* Positioned near the top-right of the modal */
+    right: 10px;
+    font-size: 24px;
+    color: var(--gray);
+    font-weight: bold;
+    cursor: pointer;
+
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+
+
+#basicDetailsModal .modal-content {
+    width: 60%;
+    text-align: left;
+}
+
+#basicDetailsModal ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+#basicDetailsModal ul li {
+    margin: 54px 0;
+}
+.back-button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000000;
+    background-color: #ccc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #ff9393;
+}
+.back-button:hover {
+    background-color:  #ff9393;;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.back-button:active {
+    animation: clickTransform 0.2s ease-in-out; /* Apply click animation */
+}
+

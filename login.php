@@ -4,7 +4,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST");
 
 // Database connection
-$conn = new mysqli('https://good-memes-listen.loca.lt', 'root', '');
+$conn = new mysqli('localhost', 'root', '');
 
 // Check connection
 if ($conn->connect_error) {

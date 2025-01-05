@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductDetails</title>
+    <link rel="stylesheet" href="productDetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="toggler">
+        <label for="toggler" class="fa fa-bars"></label>
+        
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="logo" class="logo-image">
+            <a href="#" class="logo">Secret Edens</a>
+        </div>
+        
+         <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html">about</a>
+            <a href="productList.html">products</a>
+            <a href="#review">review</a>
+            <a href="index.html">contact</a>
+        </nav>
+        
+        <div class="icons">
+            <a href="favorite.html" class="fas fa-heart"></a>
+            <a href="projectDetails.html" class="fas fa-shopping-cart"></a>
+            <a href="profile.html" class="fas fa-user"></a>
+        </div>
+    </header>
+
+    <div class="product-details">
+        <div class="product-gallery">
+            <div class="main-image-container">
+                <button class="arrow left-arrow">&lt;</button>
+                <img src="assets/1.jpg" alt="Main Product" class="main-image" id="mainImage">
+                <button class="arrow right-arrow">&gt;</button>
+            </div>
+            <div class="thumbnail-container">
+                <img src="assets/1.jpg" alt="Thumbnail 1" class="thumbnail" data-image="assets/1.jpg">
+                <img src="assets/flower.jpg" alt="Thumbnail 2" class="thumbnail" data-image="assets/flower.jpg">
+                <img src="assets/1.jpg" alt="Thumbnail 3" class="thumbnail" data-image="assets/1.jpg">
+            </div>
+        </div>
+        <div class="product-info">
+            <h1>Floewr Rose Boutique</h1>
+            <div class="price">
+                <span class="current-price">$15.50</span>
+                <span class="original-price">$31.00</span>
+                <span class="discount">-50%</span>
+            </div>
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequuntur repellat veniam nesciunt aspernatur! Sapiente, modi! Consectetur, aperiam voluptates reiciendis officiis ipsum iusto pariatur fugit eligendi, quos deleniti quas earum.
+            </p>
+            <div class="options">
+                <label>Color:</label>
+                <div class="color-options">
+                    <span class="color-circle pink" data-color="Pink"></span>
+                    <span class="color-circle white" data-color="White"></span>
+                </div>
+                <label>Size:</label>
+                <select>
+                    <option>Select Size</option>
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Large</option>
+                </select>
+            </div>
+            <div class="quantity">
+                <button class="minus">-</button>
+                <input type="text" value="1">
+                <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="favorite"><i class="fas fa-heart"></i> Favorite</button>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    const minusButton = document.querySelector('.quantity .minus');
+    const plusButton = document.querySelector('.quantity .plus');
+    const quantityInput = document.querySelector('.quantity input');
+
+    minusButton.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value, 10) || 1;
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    plusButton.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value, 10) || 1;
+        quantityInput.value = currentValue + 1;
+    });
+
+    quantityInput.addEventListener('input', () => {
+        const value = parseInt(quantityInput.value, 10);
+        if (isNaN(value) || value <= 0) {
+            quantityInput.value = 1;
+        }
+    });
+</script>
+
+<script>
+    const colorOptions = document.querySelectorAll('.color-options .color-circle');
+    let selectedColor = '';
+
+    colorOptions.forEach(color => {
+        color.addEventListener('click', () => {
+            // Remove the 'selected' class from all color options
+            colorOptions.forEach(c => c.classList.remove('selected'));
+
+            // Add the 'selected' class to the clicked color
+            color.classList.add('selected');
+
+            // Update the selected color
+            selectedColor = color.getAttribute('data-color');
+            console.log(`Selected Color: ${selectedColor}`);
+        });
+    });
+</script>
+
+<script>
+    const mainImage = document.getElementById('mainImage');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+    let currentIndex = 0;
+
+    // Update the main image and highlight the corresponding thumbnail
+    function updateMainImage(index) {
+        mainImage.src = thumbnails[index].getAttribute('data-image');
+        thumbnails.forEach(t => t.classList.remove('selected'));
+        thumbnails[index].classList.add('selected');
+    }
+
+    // Initialize by highlighting the first thumbnail
+    updateMainImage(currentIndex);
+
+    // Add event listeners for thumbnails
+    thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+            currentIndex = index;
+            updateMainImage(currentIndex);
+        });
+    });
+
+    // Add event listener for left arrow
+    leftArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+        updateMainImage(currentIndex);
+    });
+
+    // Add event listener for right arrow
+    rightArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % thumbnails.length;
+        updateMainImage(currentIndex);
+    });
+</script>
+    
+    
+</html>

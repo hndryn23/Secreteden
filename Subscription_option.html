@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="subscibe/sub.css"> <!-- Link your CSS file -->
+
+</head>
+<body>
+  <header>
+        <!-- Logo and Title Wrapper -->
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Secret Edens Logo">
+            <a href="#" class="logo">Secret Edens</a>
+        </div>
+
+        <!-- Navigation Bar -->
+         <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html">about</a>
+            <a href="productList.html">products</a>
+            <a href="#review">review</a>
+            <a href="index.html">contact</a>
+        </nav>
+
+        <!-- Icons -->
+        <div class="icons">
+            <a href="favorite.html" class="fas fa-heart"></a>
+            <a href="productDetails.html" class="fas fa-shopping-cart"></a>
+            <a href="profile.html" class="fas fa-user"></a>
+        </div>
+    </header>
+
+    <div class="pricing-table">
+        <div class="details">
+            <h2>Subscription</h2>
+            <p>plans start at only RM 25/month. Cancel at any time </p>
+        </div>
+        <div class="grid">
+            <div class="box basic">
+                <div class="title">Basic</div> <!-- name of the plan -->
+                <div class="price">
+                    <b>free</b><!-- price -->
+                    <span>unlimited</span>
+                </div>
+                <div class="features">
+                    <div>limited options flowers</div>
+                    <div>tips for flowers via email</div>
+                    <div>no delivery included</div>
+                    <div>Limited bouquet sizes </div>
+                </div>
+                  <div class="button">
+                    <button class="details-button" onclick="showPlanDetails('basicDetails');">Details</button>
+                </div>
+            </div>
+            <div id="basicDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetailsModal('basicDetailsModal')">✕</span>
+            <h2>Basic Plan Details</h2>
+            <ul>
+                <li>Access to a curated selection of seasonal flowers (limited options).</li>
+                <li>Monthly care tips for flowers via email.</li>
+                <li>Pickup-only service</li>
+                <li>No premium flower varieties</li>
+            </ul>
+        </div>
+      </div>
+            <div class="box-premium">
+                <div class="title">Premium</div> <!-- name of the plan -->
+                <div class="price">
+                    <b>RM 25</b><!-- price -->
+                    <span> per month</span>
+                </div>
+                <div class="features">
+                    <div>Full access to the entire flower</div>
+                    <div>Monthly flower delivery included </div>
+                    <div>Priority customer service</div>
+                    <div>Free delivery for all purchases</div>
+                    <div>Access to flower care workshops</div>
+                    <div>Bonus bouquet for special occasions</div>
+                    
+                </div>
+                <div class="button">
+                    <button class="subscribe-button" onclick="window.location.href='payment_type.html';">
+    Subscribe
+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="back-button-container">
+        <button class="back-button" onclick="window.location.href='profile.html'">Back</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

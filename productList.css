@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --blue: #4A90E2; /* Modern blue shade */
+    --light-blue: rgba(74, 144, 226, 0.1); /* Subtle blue background */
+    --dark-blue: #003B73; /* Darker blue hover color */
+    --gray: #555; /* Neutral gray for text */
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none; /* Remove underline globally */
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 0 5%; /* Adjust padding */
+    height: 4rem; /* Fixed height for the header */
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    overflow: clip;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    gap: 0.5rem; /* Space between logo image and text */
+}
+
+.logo-image {
+    width: 40px; /* Adjust size of logo image */
+    height: auto;
+}
+
+header .logo {
+    font-size: 1.6rem; /* Smaller font size for logo text */
+    font-weight: bold;
+    color: #333; /* Logo text color */
+    text-transform: capitalize;
+}
+
+header .logo span {
+    color: var(--blue); /* Optional: Accent color */
+}
+
+/* Navigation */
+header .navbar {
+    display: flex;
+    gap: 1rem; /* Reduced spacing between navigation links */
+}
+
+header .navbar a {
+    font-size: 1.2rem; /* Smaller font size for navigation links */
+    color: #666;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem; /* Reduced padding for smaller size */
+    line-height: 4rem; /* Align links vertically within the header */
+}
+
+header .navbar a:hover {
+    color: var(--blue);
+}
+
+/* Icons */
+header .icons {
+    display: flex;
+    gap: 1rem; /* Reduced spacing between icons */
+    align-items: center;
+}
+
+header .icons a {
+    font-size: 1.6rem; /* Smaller icon size */
+    color: #333;
+    line-height: 4rem; /* Align icons vertically within the header */
+}
+
+header .icons a:hover {
+    color: var(--blue);
+}
+
+/* Hamburger Menu */
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 2rem; /* Slightly smaller hamburger menu icon size */
+    color: #333;
+    padding: 0.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Media Queries */
+
+/* Medium Screens (991px and below) */
+@media (max-width: 991px) {
+    header {
+        padding: 0 4%; /* Reduced padding for medium screens */
+    }
+
+    header .navbar {
+        gap: 0.4rem; /* Further reduced spacing between links */
+    }
+
+    header .navbar a {
+        font-size: 1rem; /* Reduced font size */
+    }
+
+    header .icons a {
+        font-size: 1.4rem; /* Smaller icon size */
+    }
+
+    header .logo {
+        font-size: 1.2rem; /* Reduced font size for logo text */
+    }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block; /* Show hamburger menu */
+    }
+
+    header {
+        padding: 0 3%; /* Further reduced padding for smaller screens */
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 0.5rem 0;
+        z-index: 999;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden by default */
+        transition: clip-path 0.5s ease; /* Smooth transition */
+    }
+
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a {
+        margin: 0;
+        padding: 0.4rem 1rem; /* Smaller padding for mobile links */
+        text-align: center;
+        font-size: 1rem; /* Further reduced font size */
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+        line-height: initial; /* Reset line height for navbar items */
+    }
+
+    header .icons a {
+        font-size: 1.4rem; /* Smaller icon size */
+    }
+
+    header .logo {
+        font-size: 1.3rem; /* Adjusted font size for smaller screens */
+    }
+}
+
+
+/* Very Small Screens (450px and below) */
+@media (max-width: 450px) {
+    header {
+        padding: 0 2%; /* Smallest padding for very small screens */
+    }
+
+    header .navbar {
+        gap: 1rem; /* Reduced gap for links */
+    }
+
+    header .navbar a {
+        font-size: 0.9rem; /* Further reduced link size */
+    }
+
+    header .icons a {
+        font-size: 1.1rem; /* Further reduced icon size */
+    }
+
+    header .logo {
+        font-size: 1.2rem; /* Smaller logo text for very small screens */
+    }
+}
+
+.products-section {
+    padding: 6rem 5%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.products-section .heading {
+    display: inline-block; /* Ensure the heading behaves like a block for centering */
+    background: var(--light-blue);
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--gray);
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the heading */
+}
+
+
+.products-section .heading span {
+    color: var(--blue); /* Blue text for the "About" word */
+}
+
+.search-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem; /* Add space above the search bar */
+    margin-bottom: 2rem; /* Add space below the search bar if needed */
+}
+.search-filter input {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    width: 30%;
+    background: #fff;
+    outline: none;
+}
+
+.search-filter select {
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.products-section .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; 
+    justify-content: center;
+}
+
+
+.products-section .box-container .box {
+    flex: 1 1 28rem; 
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.products-section .box-container .box:hover {
+    transform: translateY(-0.5rem); 
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+
+.products-section .box-container .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.4rem;
+    color: var(--blue);
+    background: var(--light-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+
+.products-section .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 1.5rem;
+    background: var(--light-blue);
+    overflow: hidden;
+}
+
+.products-section .box-container .box .image img {
+    height: 20rem;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+.products-section .box-container .box:hover .image img {
+    transform: scale(1.1); 
+}
+
+
+.products-section .box-container .box .image .icons {
+    position: absolute;
+    bottom: -5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    transition: bottom 0.3s ease;
+}
+
+.products-section .box-container .box:hover .image .icons {
+    bottom: 1rem;
+}
+
+.products-section .box-container .box .image .icons a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: var(--blue);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.products-section .box-container .box .image .icons a:hover {
+    background: var(--dark-blue);
+    transform: scale(1.1);
+}
+
+
+.products-section .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products-section .box-container .box .content h3 {
+    font-size: 1.8rem;
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.products-section .box-container .box .content h3:hover {
+    color: var(--blue);
+}
+
+.products-section .box-container .box .content .price {
+    font-size: 1.8rem;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.products-section .box-container .box .content .price span {
+    font-size: 1.2rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+}
+
+
+.products-section .box-container .box .content .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 5rem;
+    text-decoration: none;
+}
+
+.products-section .box-container .box .content .btn:hover {
+    background: var(--dark-blue);
+}

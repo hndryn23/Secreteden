@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset ="UTF-8">
+    <link rel = "stylesheet" href="style.css">
+    <link rel = "stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Eden Garden - Favorited</title>
+<body>
+
+    <header>
+        <input type="checkbox" id="toggler">
+            <label for="toggler" class="fa fa-bars"></label>
+            
+            <div class="logo-container">
+                <img src="images/logo.png" alt="logo" class="logo-image">
+                <a href="#" class="logo">Secret Edens</a>
+            </div>
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html">about</a>
+            <a href="productList.html">products</a>
+            <a href="#review">review</a>
+            <a href="index.html">contact</a>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user"></a>
+        </div>
+    </header>
+
+ 
+    
+    <nav class="sidebar">
+        <div class="top-sidebar">
+             <img src="images/dp.jpg">
+             <p>Welcome back, Queen</p>
+        </div>
+            <hr>
+         
+         <div class="bottom-sidebar">
+             <ul>
+                 <li ><a href="favorite.html">Favorited</a></li>
+                 <li id="selected"><a href="">User Account</a></li>
+                 <li><a href="showsub.html">Purchase History</a></li>
+                 <li><a href="Subscription_option.html">Subscription</a></li>
+                 <li><a href="login.html" id="logout-button">Log Out</a></li>
+             </ul>
+         </div>
+
+    
+    <div class="dashboard">
+        <div class="user-profile">
+             <form id="edit-form" action="">
+                <h1>Edit Account</h1>
+                <br><label for="fname">Username</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter username" required><br><br>
+                <label for="lname">Password</label><br>
+                <div class="password-field">
+                    <input type="text" id="password" name="password" placeholder="Enter password" required><br><br>
+                    <span class="toggle-password" onclick="togglePassword()"Show></span>
+                </div>
+                
+                <label for="address">Address</label><br>
+                <input type="text" id="address" name="address" placeholder="Enter address" required><br><br>
+                <label for="lname">Contact Number</label><br>
+                <input type="text" id="contact" name="contact" placeholder="Enter contact number" required><br><br>
+                <input type="reset" id="reset" value="Cancel">
+                <input type="submit" id="submit">
+            </form>
+
+            <div class="edit-image">
+                <div id="image"><img src="images/dp.jpg"></div>
+              <input type="file"name="profilepic" accept="image/">  
+            </div>
+
+        </div>
+           
+
+      
+     
+            
+        </div>
+
+
+        <script src="profile.js"></script>
+</body>
+
+</head>

@@ -1,0 +1,51 @@
+/* Transaction Page Styles */
+
+.transaction-section {
+    padding: 2rem;
+    top:120px;
+    overflow: hidden;
+    background-color: rgba(17, 17, 17, 0);
+    left: 400px; 
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.transaction-section h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.transaction-table {
+    margin-top: 1rem;
+    overflow-x: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #fff;
+    
+}
+
+.transaction-table table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.transaction-table th, .transaction-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.transaction-table th {
+    background-color: #4A90E2;
+    color: #fff;
+    text-align: center;
+}
+
+.transaction-table tr:hover {
+    background-color: #f1f1f1;
+}

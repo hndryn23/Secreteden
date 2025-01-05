@@ -1,0 +1,48 @@
+/* Member List Page Styles */
+
+.member-list-section {
+    padding: 2rem;
+    top: 120px;
+    overflow: hidden;
+    background-color: rgba(17, 17, 17, 0);
+    left: 400px;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+}
+
+.member-list-section h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.member-table {
+    margin-top: 1rem;
+    overflow-x: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.member-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.member-table th, .member-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.member-table th {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+}
+
+.member-table tr:hover {
+    background-color: #f1f1f1;
+}

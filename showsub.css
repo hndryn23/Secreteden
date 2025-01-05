@@ -1,0 +1,116 @@
+/* styles.css */
+        /* Logo Size Adjustment */
+        .logo-container img {
+            width: 48px; /* Adjust logo size */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Back Button Styling */
+        .back-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button {
+            padding: 0;
+            background: none;
+            color: #4CAF50;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .back-button:hover {
+            color: #45a049;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(150, 216, 247));
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 196px;
+    color: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+}
+
+th, td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #555;
+}
+.back-button-container {
+    text-align: center;
+    margin-top: 406px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+}
+
+
+
